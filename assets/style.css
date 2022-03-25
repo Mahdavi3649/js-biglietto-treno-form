@@ -33,12 +33,17 @@ body {
 .tuo_biglietto {
   width: 100%;
   background-color: white;
-  border-radius: 10px;
+}
+
+.hr {
+  height: 3px;
 }
 
 .col_passeggero {
   float: left;
-  width: 20%;
+  width: 30%;
+  background-color: #797676;
+  height: 110px;
 }
 .col_passeggero:after {
   content: "";
@@ -46,5 +51,5 @@ body {
   clear: both;
 }
 .col_dettaglio_biglietto table thead tr th {
-  padding: 10px;
+  padding: 40px;
 }
