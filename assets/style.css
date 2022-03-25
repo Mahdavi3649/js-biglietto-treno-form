@@ -1,0 +1,32 @@
+body {
+  background-color: #b91450;
+}
+
+.height_200 {
+  border-radius: 10px;
+}
+
+.box {
+  width: 30%;
+  text-align: center;
+}
+
+.small-title {
+  color: #b91450;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.input-style {
+  border: 1px solid #b91450;
+  border-radius: 4px;
+}
+
+.btn {
+  background-color: rgb(199, 195, 195);
+  color: #b91450;
+  border-radius: 4px;
+  border: 2px solid #797676;
+  margin-right: 20px;
+  font-weight: 600;
+}
