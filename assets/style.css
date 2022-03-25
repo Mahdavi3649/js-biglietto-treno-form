@@ -30,3 +30,21 @@ body {
   margin-right: 20px;
   font-weight: 600;
 }
+.tuo_biglietto {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.col_passeggero {
+  float: left;
+  width: 20%;
+}
+.col_passeggero:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col_dettaglio_biglietto table thead tr th {
+  padding: 10px;
+}
