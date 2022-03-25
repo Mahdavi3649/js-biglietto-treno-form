@@ -12,29 +12,24 @@ enter.addEventListener("click", function(){
 
    // prezzo totale del viaggio per persone tra i 19 e 64 anni
    // 0.21€ al km
-    const costoBiglietto = km * 0.21;
+   const costoBiglietto = km * 0.21;
+   console.log(costoBiglietto);
 
-
-    const offerta = 'Tariffa Standard'
+   const offerta = 'Tariffa Standard'
    // sconto
    // 20% under 18
    // 40% over 65
+   if (age == 'minorenne'){
+     const calcoloScontoUnder = ((costoBiglietto * 20) / 100 );
+     const costoBiglietto = costoBiglietto - calcoloScontoUnder;
 
-    if (age == 'minorenne'){
+     offerta = 'Sconto Minorenne'
+   }else if (age == 'over 65'){
+     const calcoloScontoOver = ((costoBiglietto * 40) / 100 );
+     const costoBiglietto = costoBiglietto - calcoloScontoOver;
 
-        const calcoloScontoUnder = ((costoBiglietto * 20) / 100 );
-        const costoBiglietto = costoBiglietto - calcoloScontoUnder;
-        offerta = 'Sconto Minorenne'
-
-      }else if (age == 'over 65'){
-
-        const calcoloScontoOver = ((costoBiglietto * 40) / 100 );
-        const costoBiglietto = costoBiglietto - calcoloScontoOver;
-        offerta = 'Sconto Over 65'
-
-      } else{
-          offerta = 'Tariffa Standard'
-      }
+     offerta = 'Sconto Over 65'
+   }
       const carrozza = Math.floor(Math.random()*9) + 1;
       const cp = Math.floor(Math.random() * (100000 - 90000 + 1)) +90000;
     
@@ -47,16 +42,16 @@ enter.addEventListener("click", function(){
     
 })
 
-var reset = document.getElementById('reset');
+const reset = document.getElementById('reset');
 reset.addEventListener('click',
  function(){
    document.getElementById('nome_passeggero').innerHTML = "";
    document.getElementById('offerta').innerHTML = "";
    document.getElementById('costo').innerHTML = "";
-   document.getElementById('codice-cp').innerHTML = "";   document.getElementById('carrozza').innerHTML = "";
-
-   document.getElementById('nome').value = "";
-   document.getElementById('fascia').value = "";
+   document.getElementById('codice-cp').innerHTML = ""; 
+     document.getElementById('carrozza').innerHTML = "";
+   document.getElementById('name').value = "";
+   document.getElementById('age').value = "";
    document.getElementById('km').value = "";
  }
 
