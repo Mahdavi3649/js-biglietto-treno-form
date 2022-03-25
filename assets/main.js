@@ -7,23 +7,12 @@ enter.addEventListener("click", function(){
     const km = document.getElementById("km").value;
     const age = document.getElementById("age").value;
 
-    console.log(name,km,age);
+    //console.log(name,km,age);
 
 
    // prezzo totale del viaggio per persone tra i 19 e 64 anni
    // 0.21€ al km
-
-   
-   let prezzo_finale;
-   const prezzo_al_km = 0.21;
-   const prezzo_standard = km * prezzo_al_km;
-   //console.log(prezzo_standard);
-   
-   
-   const prezzo_minorenni = prezzo_standard - (prezzo_standard * 0.2)
-   const prezzo_over_65 = prezzo_standard - (prezzo_standard * 0.4)
-
-
+    const costoBiglietto = km * 0.21;
 
 
     const offerta = 'Tariffa Standard'
@@ -32,18 +21,19 @@ enter.addEventListener("click", function(){
    // 40% over 65
 
     if (age == 'minorenne'){
-       /*  const calcoloScontoUnder = ((costoBiglietto * 20) / 100 );
-        const costoBiglietto = costoBiglietto - calcoloScontoUnder; */
 
-        prezzo_finale = prezzo_minorenni;
+        const calcoloScontoUnder = ((costoBiglietto * 20) / 100 );
+        const costoBiglietto = costoBiglietto - calcoloScontoUnder;
         offerta = 'Sconto Minorenne'
 
       }else if (age == 'over 65'){
-       /*  const calcoloScontoOver = ((costoBiglietto * 40) / 100 );
-        const costoBiglietto = costoBiglietto - calcoloScontoOver; */
 
-        prezzo_finale = prezzo_over_65;
+        const calcoloScontoOver = ((costoBiglietto * 40) / 100 );
+        const costoBiglietto = costoBiglietto - calcoloScontoOver;
         offerta = 'Sconto Over 65'
+
+      } else{
+          offerta = 'Tariffa Standard'
       }
       const carrozza = Math.floor(Math.random()*9) + 1;
       const cp = Math.floor(Math.random() * (100000 - 90000 + 1)) +90000;
@@ -51,11 +41,24 @@ enter.addEventListener("click", function(){
     
        document.getElementById('nome_passeggero').innerHTML = name;
        document.getElementById('offerta').innerHTML = offerta;
-       document.getElementById('costo').innerHTML = prezzo_finale.toFixed(2);
+       document.getElementById('costo').innerHTML = costoBiglietto.toFixed(2);
        document.getElementById('codice-cp').innerHTML = cp;
        document.getElementById('carrozza').innerHTML = carrozza;
     
 })
 
+var reset = document.getElementById('reset');
+reset.addEventListener('click',
+ function(){
+   document.getElementById('nome_passeggero').innerHTML = "";
+   document.getElementById('offerta').innerHTML = "";
+   document.getElementById('costo').innerHTML = "";
+   document.getElementById('codice-cp').innerHTML = "";   document.getElementById('carrozza').innerHTML = "";
 
+   document.getElementById('nome').value = "";
+   document.getElementById('fascia').value = "";
+   document.getElementById('km').value = "";
+ }
+
+);
  
