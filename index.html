@@ -11,34 +11,33 @@
 <body>
 
     <h2 class="text-uppercase text-center text-white mt-2">Calcola il prezzo del tuo Biglietto</h2>
-    <div class="container  mt-3">
+    <div class="container mt-3">
 
-        <div class="row justify-content-around height_200 bg-white">
+        <div class="row justify-content-around height_200 bg-white pt-2">
 
-                <div class="box">
-                    <div class="small-title">Nome e Cognome</div>
-                    <input id="name" type="text" class="input-style">
-                </div>
-            
-                <div class="box">
-                        <div class="small-title">Km da percorrere</div>
-                        <input id="km" type="number" class="input-style">
-                </div>
+            <div class="box">
+                <div class="small-title">Nome e Cognome</div>
+                <input id="name" type="text" class="input-style">
+            </div>
         
-                <div class="box">
-                    <div class="small-title">Fascia d'età</div>
-                    <select id="age" name="cars" class="input-style">
-                    <option value="minorenne">Minorenne</option>
-                    <option value="Maggiorenne">Maggiorenne</option>
-                    <option value="Over 65">Over 65</option>
-                </select>
-                </div>
+            <div class="box">
+                    <div class="small-title">Km da percorrere</div>
+                    <input id="km" type="number" class="input-style">
+            </div>
+    
+            <div class="box">
+                <div class="small-title">Fascia d'età</div>
+                <select id="age" name="cars" class="input-style">
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="over 65">Over 65</option>
+            </select>
+            </div>
 
-                <div class="button-container d-flex justify-content-center m-5">
-                   <button id="enter" type="button" name="button" class="btn">Genera</button>
-                   <button id="reset" type="button" name="button" class="btn">Annulla</button>
-                </div>
-
+            <div class="button-container d-flex justify-content-center m-5">
+                <button id="enter" type="button" name="button" class="btn">Genera</button>
+                <button id="reset" type="button" name="button" class="btn">Annulla</button>
+            </div>
         </div>
     </div>
 
@@ -47,15 +46,12 @@
 
         <div class="tuo_biglietto p-3">
           <h5>DETTAGLIO PASSEGGERI</h5>
-          <hr>
-          <div class="col_passeggero">
-            <h5>NOME PASSEGGERO</h5>
-            <p id="nome_passeggero"></p>
-          </div>
+          
           <div class="col_dettaglio_biglietto">
             <table>
               <thead>
                 <tr>
+                <th class="col_passeggero"><h5>NOME PASSEGGERO</h5></th>
                  <th>Offerta</th>
                  <th>Carrozza</th>
                  <th>Codice CP</th>
@@ -63,7 +59,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr class="text-center">
+                <td id="nome_passeggero"></td>
                   <td id="offerta"></td>
                   <td id="carrozza"></td>
                   <td id="codice-cp"></td>
@@ -71,7 +68,6 @@
                 </tr>
               </tbody>
             </table>
-            <hr>
   
           </div>
   

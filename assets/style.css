@@ -35,15 +35,14 @@ body {
   background-color: white;
 }
 
-.hr {
-  height: 3px;
+h5 {
+  margin: 10px;
 }
 
 .col_passeggero {
   float: left;
-  width: 30%;
+  width: 80%;
   background-color: #797676;
-  height: 110px;
 }
 .col_passeggero:after {
   content: "";
@@ -51,5 +50,11 @@ body {
   clear: both;
 }
 .col_dettaglio_biglietto table thead tr th {
-  padding: 40px;
+  padding: 29px;
+}
+
+table {
+  width: 100%;
+  border-top: 1px solid rgb(153, 150, 150);
+  border-bottom: 1px solid rgb(153, 150, 150);
 }
